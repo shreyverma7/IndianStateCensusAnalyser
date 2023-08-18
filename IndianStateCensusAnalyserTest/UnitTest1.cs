@@ -5,9 +5,9 @@ namespace IndianStateCensusAnalyserTest
     public class Tests
     {
         public string stateCensusDataFilePath = @"D:\Bridgelabz Problem statement\IndianStateCensusAnalyser\IndianStateCensusAnalyser\Files\StateCensusData.csv";
-        public string stateCensusDataFilePath1 = @"D:\Bridgelabz Problem statement\IndianStateCensusAnalyser\IndianStateCensusAnalyser\Files\StateCensusData.txt";
-        public string stateCensusDataFilePath2 = @"D:\Bridgelabz Problem statement\IndianStateCensusAnalyser\IndianStateCensusAnalyser\Files\StateCensusDat.csv";
-        public string stateCensusDataFilePath3 = @"D:\Bridgelabz Problem statement\IndianStateCensusAnalyser\IndianStateCensusAnalyser\Files\StateCensus.csv";
+        public string stateCensusDataTxtFilePath = @"D:\Bridgelabz Problem statement\IndianStateCensusAnalyser\IndianStateCensusAnalyser\Files\StateCensusData.txt";
+        public string stateCensusDataNotExistFilePath = @"D:\Bridgelabz Problem statement\IndianStateCensusAnalyser\IndianStateCensusAnalyser\Files\StateCensusDat.csv";
+        public string stateCensusDataHeaderFilePath = @"D:\Bridgelabz Problem statement\IndianStateCensusAnalyser\IndianStateCensusAnalyser\Files\StateCensus.csv";
         public string StateCensusDataDelimeterFilePath = @"D:\Bridgelabz Problem statement\IndianStateCensusAnalyser\IndianStateCensusAnalyser\Files\StateCensusDataDelimeter.csv";
 
         public string stateCodeDataFilePath = @"D:\Bridgelabz Problem statement\IndianStateCensusAnalyser\IndianStateCensusAnalyser\Files\StateCode.csv";
@@ -29,7 +29,7 @@ namespace IndianStateCensusAnalyserTest
         {
             try
             {
-                StateCensusAnalyser.ReadStateCensusData(stateCensusDataFilePath1);
+                StateCensusAnalyser.ReadStateCensusData(stateCensusDataTxtFilePath);
             }
             catch (CensusAnalyserException ex)
             {
@@ -42,7 +42,7 @@ namespace IndianStateCensusAnalyserTest
         {
             try
             {
-                StateCensusAnalyser.ReadStateCensusData(stateCensusDataFilePath2);
+                StateCensusAnalyser.ReadStateCensusData(stateCensusDataNotExistFilePath);
             }
             catch (CensusAnalyserException ex)
             {
@@ -55,7 +55,7 @@ namespace IndianStateCensusAnalyserTest
         {
             try
             {
-                StateCensusAnalyser.ReadStateCensusData(stateCensusDataFilePath3);
+                StateCensusAnalyser.ReadStateCensusData(stateCensusDataHeaderFilePath);
             }
             catch (CensusAnalyserException ex)
             {
